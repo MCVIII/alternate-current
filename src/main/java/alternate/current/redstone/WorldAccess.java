@@ -85,7 +85,7 @@ public class WorldAccess {
 		// notify clients of the BlockState change
 		world.getChunkManager().markForUpdate(pos);
 		// mark the chunk for saving
-		((WorldChunk)chunk).markDirty();
+		world.markDirty(pos);
 		
 		return true;
 	}
